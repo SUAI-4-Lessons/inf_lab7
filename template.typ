@@ -22,7 +22,14 @@
 
   show figure.where(kind: table): set figure.caption(position: top)
 
-  show figure.where(kind: table): align(left)
+  show figure.where(kind: table): it => {
+    show figure.caption: set align(left)
+    it
+    }
+
+  show figure: it =>{
+    it
+  }
 
   set list(marker: [---], body-indent: 1em, indent: 1.25cm)
 
@@ -60,7 +67,10 @@
   show figure: set block(breakable: true)
   set math.equation(numbering: "(1)")
 
+  set page(numbering: "1", margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm))
+
   show: fix-indent()
+
 
   body
 }
