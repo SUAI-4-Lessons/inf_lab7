@@ -25,7 +25,7 @@
   show figure.where(kind: table): it => {
     show figure.caption: set align(left)
     it
-    }
+  }
 
   show figure: it =>{
     it
@@ -52,6 +52,16 @@
     }
   }
 
+
+  // toc
+  {
+    show heading: it => {
+      set text(size: 14pt)
+      set align(center)
+      upper(it)
+    }
+    outline(depth: 3, indent: true)
+  }
   show heading: it => block(width: 100%)[
     #set text(14pt, weight: "bold", hyphenate: false)
     #set par(leading: 0.8em)
@@ -67,10 +77,12 @@
   show figure: set block(breakable: true)
   set math.equation(numbering: "(1)")
 
-  set page(numbering: "1", margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm))
+  set page(
+    numbering: "1",
+    margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm),
+  )
 
   show: fix-indent()
-
 
   body
 }
