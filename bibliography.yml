@@ -1,0 +1,8 @@
+dve-bashni:
+  type: Book
+  title: Властелин Колец Две Крепости
+  author: Джон Рональд Руэл Толкин
+  page-total: 384
+  publisher: АСТ
+  serial: 'ISBN: 978-5-17-089238-9'
+  language: en
