@@ -52,7 +52,11 @@
     }
   }
 
+  
 
+  set page(
+    margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm),
+  )
   // toc
   {
     show heading: it => {
@@ -61,6 +65,7 @@
       upper(it)
     }
     outline(depth: 3, indent: true)
+    pagebreak()
   }
   show heading: it => block(width: 100%)[
     #set text(14pt, weight: "bold", hyphenate: false)
@@ -76,16 +81,13 @@
   set par(first-line-indent: 1.25cm)
   show figure: set block(breakable: true)
   set math.equation(numbering: "(1)")
-
-  set page(
-    numbering: "1",
-    margin: (top: 20mm, bottom: 20mm, left: 30mm, right: 15mm),
-  )
+  set page(numbering: "1")
 
   show: fix-indent()
 
   body
 }
+
 
 #let ch(content) = {
   align(heading(upper(content), numbering: none), center)
